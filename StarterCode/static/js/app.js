@@ -3,16 +3,21 @@ var tableData = data;
 
 var tbody = d3.select("tbody");
 
-function buildTable(data) {
-    // remove existing data
+function createTable(data) {
+    // First, clear out any existing data
     tbody.html("");
-    // loop through each object and append value in the row
+
+    // Next, loop through each object in the data
+    // and append a row and cells for each value in the row
     data.forEach((dataRow) => {
+        // Append a row to the table body
         var row = tbody.append("tr");
-        // loop through each value in row and to td
-        Object.values(dataRow).forEach((val) => {
-            var cell = row.append("tr");
-            cell.text(val);
+
+        // Loop through each field in the dataRow and add
+        // each value as a table cell (td)
+        Object.values(dataRow).forEach((value) => {
+            var cell = row.append("td");
+            cell.text(value);
         });
     });
 }
@@ -22,16 +27,25 @@ function handleClick() {
     d3.event.preventDefault();
     // Collect date/time from filter
     var date = d3.select("#datetime").property("value");
-    let filterData = tableData;
+    var filteredData = tableData;
     // confirm date exists and then filter
+    //console.log(date)
+
     if (date) {
-        filterData = filterData.filter(row => row.datetime === date);
-    };
-    buildTable(filterData);
-};
+        filteredData = filteredData.filter(row => row.datetime === date);
+
+    }
+    createTable(filteredData);
+
+
+}
+
+// Rebuild table uisng filtered data
+//createTable(filteredData);
+
 
 // Event listner
-d3.selectALL("#filter-btn").on("click", handleClick);
+d3.selectAll("#filter-btn").on("click", handleClick);
 
 // Build table upon page reload
-buildTable(tableData);
+createTable(tableData);
