@@ -35,4 +35,4 @@ Write code that will create a table dynamically based upon a [dataset provide](S
 * [UFO Sightings Data](StarterCode/static/js/data.js)
 
 # Results
-[Web Page App Screen](images (output)/temp-1.jpg)
+[Web Page App Screen.jpg](images (Output)/Image-1.jpg)
