@@ -1,4 +1,4 @@
-# Unit 14 | Assignment - JavaScript and DOM Manipulation
+JavaScript and DOM Manipulation
 
 ## Background
 
