@@ -2,7 +2,7 @@
 
 ## Objective
 
-Write code that will create a table dynamically based upon a [dataset we provide](StarterCode/static/js/data.js). Also need to allow  users to filter the table data for specific values. For this project we will be using JavaScript, HTML, and CSS, and D3.js on our web pages. 
+Write code that will create a table dynamically based upon a [dataset provide](StarterCode/static/js/data.js). Also need to allow  users to filter the table data for specific values. For this project we will be using JavaScript, HTML, and CSS, and D3.js on our web pages. 
 
 ## Project Tasks
 
